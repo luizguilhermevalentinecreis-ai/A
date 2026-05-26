@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player de Vídeo - SESI Choices</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0057b8, #007bff, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 860px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 28px;
+      padding: 34px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0, 40, 120, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .logo-area {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0057b8, #0094ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(0, 87, 184, 0.35);
+    }
+
+    h1 {
+      color: #0057b8;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #3c5f8f;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 26px;
+    }
+
+    .video-box {
+      background: #f4f9ff;
+      border: 2px solid #d7eaff;
+      border-radius: 22px;
+      padding: 14px;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+      background: #000;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      background: #0057b8;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      background: #003f88;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 87, 184, 0.25);
+    }
+
+    .footer-text {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #6b86aa;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 18px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="logo-area">S</div>
+
+    <h1>SESI Choices</h1>
+
+    <p>
+      Assista ao conteúdo abaixo com atenção.  
+      O arquivo de vídeo deve estar na mesma pasta deste HTML com o nome
+      <strong>vid.mp4</strong>.
+    </p>
+
+    <section class="video-box">
+      <video controls>
+        <source src="vid.mp4" type="video/mp4">
+        Seu navegador não suporta o player de vídeo.
+      </video>
+    </section>
+
+    <a href="vid.mp4" download class="button">
+      Baixar vídeo
+    </a>
+
+    <div class="footer-text">
+      Plataforma educacional • Conteúdo interativo
+    </div>
+  </main>
+</body>
+</html>
